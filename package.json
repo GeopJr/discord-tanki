@@ -1,0 +1,11 @@
+{
+  "name": "discord_tanki",
+  "version": "1.0.0",
+  "description": "Adds live game stats to discord rich presence",
+  "main": "index.js",
+  "author": "GeopJr",
+  "license": "MIT",
+  "dependencies": {
+    "discord-rpc": "^3.0.0-beta.8"
+  }
+}
