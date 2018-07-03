@@ -1,10 +1,9 @@
-# discord-tanki
-Discord Rich Presence for Tanki Online
+[intro](https://i.imgur.com/AJuxSSX.png)
 
 <div align="center">
   <br />
   <p>
-    <img src="https://i.imgur.com/OnjjgtN.png" alt="image"/></a>
+    <img src="https://i.imgur.com/3YwL69s.gif" alt="image"/></a>
   </p>
   <br />
   <p>
