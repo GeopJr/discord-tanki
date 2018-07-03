@@ -1,4 +1,4 @@
-[intro](https://i.imgur.com/AJuxSSX.png)
+![intro](https://i.imgur.com/AJuxSSX.png)
 
 <div align="center">
   <br />
