@@ -16,7 +16,7 @@ async function updatediscord() {
                 largeImageKey: `logo`,
                 smallImageKey: (config.rank),
                 largeImageText: `Tanki Online`,
-                smallImageText: (config.rank),
+                smallImageText: (config.rank).capitalize().replace(/[_-]/g, " "),
                 instance: false,
             });
         }
