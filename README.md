@@ -94,6 +94,16 @@ warrant_officer_4
 warrant_officer_5
 
 ```
+
+# Config Example
+#### This is an example config
+```
+{
+	"username" : "GeopJr",
+	"rank" : "second_lieutenant"
+}
+```
+
 # Found any errors or need help?
 
 Open an issue
