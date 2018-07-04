@@ -27,7 +27,7 @@
 - That's all , leave it open on your taskbar
 
 # Rank names
-
+#### WARNING!!! USE THEM EXACTLY AS SHOWN , CASE SENSITIVE , NO SPACES
 The rank names are :
 
 ```
