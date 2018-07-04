@@ -1,7 +1,7 @@
 {
-  "name": "discord_tanki",
+  "name": "discord-tanki",
   "version": "1.0.0",
-  "description": "Adds live game stats to discord rich presence",
+  "description": "Discord Rich Presence for Tanki Online",
   "main": "index.js",
   "author": "GeopJr",
   "license": "MIT",
