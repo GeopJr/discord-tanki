@@ -107,3 +107,11 @@ warrant_officer_5
 # Found any errors or need help?
 
 Open an issue
+
+
+<div align="center">
+  <br />
+  <p>
+    <img src="https://i.imgur.com/uIOpz3t.png" alt="info"/></a>
+  </p>
+  </div>
