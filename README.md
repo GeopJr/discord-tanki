@@ -8,7 +8,7 @@
   <br />
   <p>
     <a href="https://codeclimate.com/github/GeopJr/discord-tanki/maintainability"><img src="https://api.codeclimate.com/v1/badges/fcaa6a8bbf1778ac9655/maintainability" /></a>
-    <a href="https://github.com/GeopJr/discord-tanki/blob/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/AFNetworking.svg" alt="MIT" /></a>
+    <a href="https://github.com/GeopJr/discord-tanki/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-000000.svg" alt="MIT" /></a>
   </p>
 </div>
 
