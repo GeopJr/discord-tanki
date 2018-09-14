@@ -3,10 +3,6 @@
 <div align="center">
   <br />
   <p>
-    <img src="https://i.imgur.com/1XvQG6E.gif" alt="image"/></a>
-  </p>
-  <br />
-  <p>
     <a href="https://codeclimate.com/github/GeopJr/discord-tanki/maintainability"><img src="https://api.codeclimate.com/v1/badges/fcaa6a8bbf1778ac9655/maintainability" /></a>
     <a href="https://github.com/GeopJr/discord-tanki/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-000000.svg" alt="MIT" /></a>
   </p>
@@ -16,7 +12,7 @@
 #### Shows your tanki info (crystals, golds, k/d ratio, exp, exp left, rank) also shows your rank icon and time played!
 
 # Screenshots
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/lCERtoW" data-context="false"><a href="//imgur.com/lCERtoW">discord-tanki https://github.com/GeopJr/discord-tanki</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+https://imgur.com/a/lCERtoW
 
 # How to use
 
