@@ -9,7 +9,7 @@
 </div>
 
 # A discord-rpc for tanki online!
-#### Shows your tanki info (crystals, golds, k/d ratio, exp, exp left, rank) also shows your rank icon and time played!
+#### Shows your tanki info (crystals, golds, k/d ratio, exp, exp left, rank) also shows your rank icon!
 
 # Screenshots
 https://imgur.com/a/lCERtoW
