@@ -48,8 +48,11 @@ Big :
 # Notes
 
 This will update your tanki info every 5 minutes
+
 The rich presence will update every 15 seconds
+
 The states randomly circle from crystals to kd ratio to etc
+
 # Found any errors or need help?
 
 Open an issue
