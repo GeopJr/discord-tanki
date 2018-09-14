@@ -22,7 +22,7 @@ https://imgur.com/a/lCERtoW
 - Replace `your_tanki_username` with your tanki username
 - Replace `the_mode_you_want` with either `small` or `big`
 - Save it
-- Double click `start.bat`
+- Double click `start.bat` (for linux users`start.sh`)
 - That's all , leave it open on your taskbar
 
 
