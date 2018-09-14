@@ -145,6 +145,8 @@ async function updatetanki() {
 
 updatetanki();
 
+const startTimestamp = new Date();
+
 async function updatediscord() {
   const myArray = [
     `KD : ${kd}`,
@@ -155,12 +157,11 @@ async function updatediscord() {
     `Rank : ${rank}`
   ];
 
-  const startTimestamp = new Date();
-
   const randomItem = myArray[Math.floor(Math.random() * myArray.length)];
   rpc.setActivity({
     details: `Playing as ` + (config.username),
     state: (randomItem),
+    startTimestamp,
     largeImageKey: (bigg),
     smallImageKey: (smalll),
     largeImageText: (biggtexx),
