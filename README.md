@@ -17,7 +17,7 @@ https://imgur.com/a/lCERtoW
 # How to use
 
 - Install [node](https://nodejs.org/en/)
-- Download this (either clone the repo or [here](https://github.com/GeopJr/discord-tanki/releases)
+- Download this (either clone the repo or [here](https://github.com/GeopJr/discord-tanki/releases))
 - Open config.json using a text editor
 - Replace `your_tanki_username` with your tanki username
 - Replace `the_mode_you_want` with either `small` or `big`
