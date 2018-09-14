@@ -12,98 +12,45 @@
   </p>
 </div>
 
+# A discord-rpc for tanki online!
+#### Shows your tanki info (crystals, golds, k/d ratio, exp, exp left, rank) also shows your rank icon and time played!
+
+# Screenshots
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/lCERtoW" data-context="false"><a href="//imgur.com/lCERtoW">discord-tanki https://github.com/GeopJr/discord-tanki</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
 # How to use
 
 - Install [node](https://nodejs.org/en/)
-- Download the repo
-- Open a command prompt or a terminal on repo's folder
-- Type : `npm install`
-- Wait
-- Now open config.json using a text editor
-- Replace `your_username` with your tanki username
-- Replace `your_rank_as_displayed_in_the_readme` with your rank as shown below
+- Download this (either clone the repo or [here](https://github.com/GeopJr/discord-tanki/releases)
+- Open config.json using a text editor
+- Replace `your_tanki_username` with your tanki username
+- Replace `the_mode_you_want` with either `small` or `big`
 - Save it
-- Now on the same cmd or terminal type `node index.js`
+- Double click `start.bat`
 - That's all , leave it open on your taskbar
 
-# Rank names
-#### WARNING!!! USE THEM EXACTLY AS SHOWN , CASE SENSITIVE , NO SPACES
-The rank names are :
-
-```
-brigadier
-
-captain
-
-colonel
-
-commander
-
-corporal
-
-field_marshal
-
-first_lieutenant
-
-first_sergeant
-
-gefreiter
-
-general
-
-generalissimo
-
-legend
-
-lieutenant_colonel
-
-lieutenant_general
-
-major
-
-major_general
-
-marshal
-
-master_corporal
-
-master_sergeant
-
-private
-
-recruit
-
-second_lieutenant
-
-sergeant
-
-sergeant_major
-
-staff_sergeant
-
-third_lieutenant
-
-warrant_officer_1
-
-warrant_officer_2
-
-warrant_officer_3
-
-warrant_officer_4
-
-warrant_officer_5
-
-```
 
 # Config Example
 #### This is an example config
 ```
 {
 	"username" : "GeopJr",
-	"rank" : "second_lieutenant"
+	"mode" : "small"
 }
 ```
 
+# Small & Big screenshots
+
+Small :
+![small](https://i.imgur.com/bJfjFmB.png)
+Big :
+![big](https://i.imgur.com/QRAkRWW.png)
+
+# Notes
+
+This will update your tanki info every 5 minutes
+The rich presence will update every 15 seconds
+The states randomly circle from crystals to kd ratio to etc
 # Found any errors or need help?
 
 Open an issue
