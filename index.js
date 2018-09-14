@@ -171,7 +171,7 @@ async function updatediscord() {
 
 rpc.on('ready', () => {
   console.log(`Connected to Discord! (${appClient})`);
-  global.intloop = setInterval(updatetanki, 60000);
+  global.intloop = setInterval(updatetanki, 300000);
   global.intloop = setInterval(updatediscord, 15000);
 });
 
