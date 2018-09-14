@@ -57,6 +57,8 @@ The states randomly circle from crystals to kd ratio to etc
 
 Open an issue
 
+# Thanks
+『ManosTo』#4130 for testing
 
 <div align="center">
   <br />
