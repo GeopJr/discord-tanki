@@ -161,7 +161,6 @@ async function updatediscord() {
   rpc.setActivity({
     details: `Playing as ` + (config.username),
     state: (randomItem),
-    startTimestamp,
     largeImageKey: (bigg),
     smallImageKey: (smalll),
     largeImageText: (biggtexx),
