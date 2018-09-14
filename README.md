@@ -38,8 +38,11 @@ https://imgur.com/a/lCERtoW
 # Small & Big screenshots
 
 Small :
+
 ![small](https://i.imgur.com/bJfjFmB.png)
+
 Big :
+
 ![big](https://i.imgur.com/QRAkRWW.png)
 
 # Notes
