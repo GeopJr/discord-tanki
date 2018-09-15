@@ -11,7 +11,7 @@ const rpc = new Client({
   appClient = "463793562639794176";
 
 async function checkforupdates() {
-  const current_version = "1.6.0"
+  const current_version = "1.7.0"
   const ress = await snekfetch.get('https://api.github.com/repos/GeopJr/discord-tanki/releases/latest');
   try {
 
@@ -127,7 +127,7 @@ async function updatetanki() {
         numrank = (res.body.response.rank) - 30
         rank = "Legend " + (numrank)
       } else if ((res.body.response.rank) == 31) {
-        rank = "Legend"
+        rank = "Legend 1"
         rankimg = "legend"
       }
     } else if ((res.body.response.hasPremium) == true) {
@@ -226,7 +226,7 @@ async function updatetanki() {
         numrank = (res.body.response.rank) - 30
         rank = "Legend " + (numrank)
       } else if ((res.body.response.rank) == 31) {
-        rank = "Legend"
+        rank = "Legend 1"
         rankimg = "pre_legend"
       }
     }
@@ -240,15 +240,28 @@ async function updatetanki() {
     exp = (res.body.response.score).toLocaleString('en') + "/" + (res.body.response.scoreNext).toLocaleString('en')
     expleftcommas = (expleft).toLocaleString('en')
 
+    if ((config.logo) == "ice") {
+      foo = "bar"
+    } else if ((config.logo) == "fire") {
+      foo = "bar"
+    } else if ((config.logo) == "railgun") {
+      foo = "bar"
+    } else if ((config.logo) == "normal") {
+      foo = "bar"
+    } else {
+      console.log(`Use normal, fire, ice or railgun logo in config.json`)
+      process.exit()
+    };
+
     if ((config.mode) == "small") {
-      bigg = "logo"
+      bigg = (config.logo)
       smalll = (rankimg)
       smallltexx = (rank)
       biggtexx = "Tanki Online"
       console.log(`Updated Tanki Info & config`);
     } else if ((config.mode) == "big") {
       bigg = (rankimg)
-      smalll = "logo"
+      smalll = (config.logo)
       smallltexx = "Tanki Online"
       biggtexx = (rank)
       console.log(`Updated Tanki Info & config`);
