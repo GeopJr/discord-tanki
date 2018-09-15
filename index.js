@@ -236,12 +236,13 @@ async function updatetanki() {
       biggtexx = (rank)
       console.log(`Updated Tanki Info & config`);
     } else {
-      console.log(`Use small or big in config.json`)
+      console.log(`Use small or big mode in config.json`)
       process.exit()
     };
 
-  } catch (error) {
-    console.error(error);
+  } catch {
+    console.log(`User not found, check your username in config.json!`)
+    process.exit()
   }
 }
 
