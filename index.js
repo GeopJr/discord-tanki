@@ -240,19 +240,6 @@ async function updatetanki() {
     exp = (res.body.response.score).toLocaleString('en') + "/" + (res.body.response.scoreNext).toLocaleString('en')
     expleftcommas = (expleft).toLocaleString('en')
 
-    if ((config.logo) == "ice") {
-      foo = "bar"
-    } else if ((config.logo) == "fire") {
-      foo = "bar"
-    } else if ((config.logo) == "railgun") {
-      foo = "bar"
-    } else if ((config.logo) == "normal") {
-      foo = "bar"
-    } else {
-      console.log(`Use normal, fire, ice or railgun logo in config.json`)
-      process.exit()
-    };
-
     if ((config.mode) == "small") {
       bigg = (config.logo)
       smalll = (rankimg)
@@ -267,6 +254,19 @@ async function updatetanki() {
       console.log(`Updated Tanki Info & config`);
     } else {
       console.log(`Use small or big mode in config.json`)
+      process.exit()
+    };
+    
+    if ((config.logo) == "ice") {
+      foo = "bar"
+    } else if ((config.logo) == "fire") {
+      foo = "bar"
+    } else if ((config.logo) == "railgun") {
+      foo = "bar"
+    } else if ((config.logo) == "normal") {
+      foo = "bar"
+    } else {
+      console.log(`Use normal, fire, ice or railgun logo in config.json`)
       process.exit()
     };
 
