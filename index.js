@@ -10,6 +10,23 @@ const rpc = new Client({
   }),
   appClient = "463793562639794176";
 
+async function checkforupdates() {
+  const current_version = "1.6.0"
+  const ress = await snekfetch.get('https://api.github.com/repos/GeopJr/discord-tanki/releases/latest');
+  try {
+
+    if ((ress.body.tag_name) == current_version) {
+      console.log(`Using latest version`)
+    } else {
+      console.log(`Update Available: ` + (ress.body.name))
+    }
+
+  } catch (e) {
+    console.log(`Error Checking for Updates`)
+  }
+}
+checkforupdates();
+
 async function updatetanki() {
   const res = await snekfetch.get('https://ratings.tankionline.com/api/eu/profile/?user=' + (config.username));
   try {
