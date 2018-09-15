@@ -48,8 +48,12 @@ Big :
 ![big](https://i.imgur.com/QRAkRWW.png)
 
 # Logo Screenshots
+Normal & Fire
 
-![normal](https://i.imgur.com/I9Tfquk.png)![fire](https://i.imgur.com/o6nSCJx.png)![ice](https://i.imgur.com/5oDCe30.png)![railgun](https://i.imgur.com/l1w0BGa.png)
+![normal](https://i.imgur.com/I9Tfquk.png)![fire](https://i.imgur.com/o6nSCJx.png)
+Ice & Railgun
+
+![ice](https://i.imgur.com/5oDCe30.png)![railgun](https://i.imgur.com/l1w0BGa.png)
 
 # Notes
 
