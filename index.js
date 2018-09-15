@@ -262,7 +262,7 @@ async function updatediscord() {
 
   const randomItem = myArray[Math.floor(Math.random() * myArray.length)];
   rpc.setActivity({
-    details: `Playing as ` + (config.username),
+    details: `Nickname : ` + (config.username), //as mentioned by Blload
     state: (randomItem),
     startTimestamp,
     largeImageKey: (bigg),
