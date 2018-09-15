@@ -240,7 +240,7 @@ async function updatetanki() {
       process.exit()
     };
 
-  } catch {
+  } catch (e) {
     console.log(`User not found, check your username in config.json!`)
     process.exit()
   }
