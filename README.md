@@ -50,11 +50,11 @@ Big :
 # Logo Screenshots
 Normal & Fire
 
-![normal](https://i.imgur.com/I9Tfquk.png)![fire](https://i.imgur.com/o6nSCJx.png)
+![normal&fire](https://i.imgur.com/dDcjd5u.png)
 
 Ice & Railgun
 
-![ice](https://i.imgur.com/5oDCe30.png)![railgun](https://i.imgur.com/l1w0BGa.png)
+![ice&railgun](https://i.imgur.com/j6ntnXd.png)
 
 # Notes
 
