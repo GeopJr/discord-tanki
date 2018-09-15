@@ -21,6 +21,7 @@ https://imgur.com/a/lCERtoW
 - Open config.json using a text editor
 - Replace `your_tanki_username` with your tanki username
 - Replace `the_mode_you_want` with either `small` or `big`
+- Replace `the_logo_you_want` with either `normal`, `fire`, `ice` or `railgun`
 - Save it
 - Double click `start.bat` (for linux users`start.sh`)
 - That's all , leave it open on your taskbar
@@ -31,7 +32,8 @@ https://imgur.com/a/lCERtoW
 ```
 {
 	"username" : "GeopJr",
-	"mode" : "small"
+	"mode" : "small",
+	"logo" : "fire"
 }
 ```
 
@@ -44,6 +46,10 @@ Small :
 Big :
 
 ![big](https://i.imgur.com/QRAkRWW.png)
+
+# Logo Screenshots
+
+![normal](https://i.imgur.com/I9Tfquk.png)![fire](https://i.imgur.com/o6nSCJx.png)![ice](https://i.imgur.com/5oDCe30.png)![railgun](https://i.imgur.com/l1w0BGa.png)
 
 # Notes
 
