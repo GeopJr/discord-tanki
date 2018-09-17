@@ -239,6 +239,7 @@ async function updatetanki() {
     expleft = (res.body.response.scoreNext) - (res.body.response.score)
     exp = (res.body.response.score).toLocaleString('en') + "/" + (res.body.response.scoreNext).toLocaleString('en')
     expleftcommas = (expleft).toLocaleString('en')
+    tanname = (res.body.response.name)
 
     if ((config.mode) == "small") {
       bigg = (config.logo)
@@ -292,7 +293,7 @@ async function updatediscord() {
 
   const randomItem = myArray[Math.floor(Math.random() * myArray.length)];
   rpc.setActivity({
-    details: `Nickname : ` + (config.username), //as mentioned by Blload
+    details: `Nickname : ` + (tanname), //as mentioned by Blload
     state: (randomItem),
     startTimestamp,
     largeImageKey: (bigg),
