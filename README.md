@@ -66,10 +66,10 @@ The states randomly circle from crystals to kd ratio to etc
 
 # Found any errors or need help?
 
-Open an issue
+Open an issue or message me **『Geop』#4066** or email me **geopjr@geopjr.xyz**
 
 # Thanks
-Manos#4130 for testing
+Manos#8049 for testing
 
 <div align="center">
   <br />
