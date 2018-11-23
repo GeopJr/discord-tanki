@@ -2,8 +2,15 @@ const {
   Client
 } = require('discord-rpc')
 const snekfetch = require('snekfetch');
+yaml = require('js-yaml');
+fs   = require('fs');
 
-var config = require("./config.json")
+try {
+  var config = yaml.safeLoad(fs.readFileSync('./config.yml', 'utf8'));
+} catch (e) {
+  console.log(e);
+  console.log("Send this to 『Geop』#4066");
+}
 
 const rpc = new Client({
     transport: "ipc"
@@ -11,7 +18,7 @@ const rpc = new Client({
   appClient = "463793562639794176";
 
 async function checkforupdates() {
-  const current_version = "1.7.0"
+  const current_version = "1.8.0"
   const ress = await snekfetch.get('https://api.github.com/repos/GeopJr/discord-tanki/releases/latest');
   try {
 
@@ -239,7 +246,6 @@ async function updatetanki() {
     expleft = (res.body.response.scoreNext) - (res.body.response.score)
     exp = (res.body.response.score).toLocaleString('en') + "/" + (res.body.response.scoreNext).toLocaleString('en')
     expleftcommas = (expleft).toLocaleString('en')
-    tanname = (res.body.response.name)
 
     if ((config.mode) == "small") {
       bigg = (config.logo)
@@ -293,7 +299,7 @@ async function updatediscord() {
 
   const randomItem = myArray[Math.floor(Math.random() * myArray.length)];
   rpc.setActivity({
-    details: `Nickname : ` + (tanname), //as mentioned by Blload
+    details: `Nickname : ` + (config.username), //as mentioned by Blload
     state: (randomItem),
     startTimestamp,
     largeImageKey: (bigg),
@@ -306,7 +312,7 @@ async function updatediscord() {
 
 rpc.on('ready', () => {
   console.log(`Connected to Discord! (${appClient})`);
-  global.intloop = setInterval(updatetanki, 60000);
+  global.intloop = setInterval(updatetanki, 300000);
   global.intloop = setInterval(updatediscord, 15000);
 });
 

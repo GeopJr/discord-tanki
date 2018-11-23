@@ -1,0 +1,20 @@
+#     _ _                       _        _              _    _ 
+#    | (_)                     | |      | |            | |  (_)
+#  __| |_ ___  ___ ___  _ __ __| |______| |_ __ _ _ __ | | ___ 
+# / _` | / __|/ __/ _ \| '__/ _` |______| __/ _` | '_ \| |/ / |
+#| (_| | \__ \ (_| (_) | | | (_| |      | || (_| | | | |   <| |
+# \__,_|_|___/\___\___/|_|  \__,_|       \__\__,_|_| |_|_|\_\_|
+                                                                                                                                                                                                                      # Your username
+# eg. username: GeopJr
+
+username: your_tanki_username
+
+# Small or Big Rank
+# eg. mode: big
+
+mode: the_mode_you_want
+
+# The logo you want
+# eg. logo: fire
+
+logo: the_logo_you_want

@@ -11,30 +11,33 @@
 # A discord-rpc for tanki online!
 #### Shows your tanki info (crystals, golds, k/d ratio, exp, exp left, rank) also shows your rank icon & time wasted playin :)!
 
+# MAJOR UPDATE: THIS IS NOW COMPILED, AKA YOU DON'T NEED TO INSTALL NODE
+# [RELEASES](https://github.com/GeopJr/discord-tanki/releases), DOWNLOAD THE ONE FOR YOUR OS & BITS
+# CHANGE THE `config.yml` INFO AS SHOWN [HERE](https://github.com/GeopJr/discord-tanki#config-example)
+
 # Screenshots
 https://imgur.com/a/lCERtoW
 
 # How to use
 
-- Install [node](https://nodejs.org/en/)
-- Download this (either clone the repo or [here](https://github.com/GeopJr/discord-tanki/releases))
-- Open config.json using a text editor
+- [RELEASES](https://github.com/GeopJr/discord-tanki/releases), download the one for your OS & bits
+- Extract the folder somewhere
+- Open config.yml using a text editor
 - Replace `your_tanki_username` with your tanki username
 - Replace `the_mode_you_want` with either `small` or `big`
 - Replace `the_logo_you_want` with either `normal`, `fire`, `ice` or `railgun`
 - Save it
-- Double click `start.bat` (for linux users`start.sh`)
+- Double click `index-win.exe` (if you are using linux or mac, I guess you know what to do)
 - That's all , leave it open on your taskbar
-
 
 # Config Example
 #### This is an example config
 ```
-{
-	"username" : "GeopJr",
-	"mode" : "small",
-	"logo" : "fire"
-}
+username: GeopJr
+
+mode: big
+
+logo: fire
 ```
 
 # Small & Big screenshots
@@ -64,9 +67,23 @@ The rich presence will update every 15 seconds
 
 The states randomly circle from crystals to kd ratio to etc
 
+# ALMOST EVERY ERROR IS CAUSED BY A WRONG CONFIG.YML
+
 # Found any errors or need help?
 
 Open an issue or message me **『Geop』#4066** or email me **geopjr@geopjr.xyz**
+
+# How to use SOURCE
+
+- Install [node](https://nodejs.org/en/)
+- Download this (clone the repo)
+- Open config.yml using a text editor
+- Replace `your_tanki_username` with your tanki username
+- Replace `the_mode_you_want` with either `small` or `big`
+- Replace `the_logo_you_want` with either `normal`, `fire`, `ice` or `railgun`
+- Save it
+- Double click `start.bat` (for linux users`start.sh`)
+- That's all , leave it open on your taskbar
 
 # Thanks
 Manos#8049 for testing
