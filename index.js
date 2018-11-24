@@ -5,20 +5,25 @@ const snekfetch = require('snekfetch');
 yaml = require('js-yaml');
 fs   = require('fs');
 
-try {
-  var config = yaml.safeLoad(fs.readFileSync('./config.yml', 'utf8'));
-} catch (e) {
-  console.log(e);
-  console.log("Send this to 『Geop』#4066");
-}
 
-const rpc = new Client({
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+ const timer = ms => new Promise( res => setTimeout(res, ms));
+try {
+    
+  var config = yaml.safeLoad(fs.readFileSync('./config.yml', 'utf8'));
+try {
+  const rpc = new Client({
     transport: "ipc"
   }),
   appClient = "463793562639794176";
 
 async function checkforupdates() {
-  const current_version = "1.8.0"
+  const current_version = "1.9.0"
   const ress = await snekfetch.get('https://api.github.com/repos/GeopJr/discord-tanki/releases/latest');
   try {
 
@@ -246,7 +251,9 @@ async function updatetanki() {
     expleft = (res.body.response.scoreNext) - (res.body.response.score)
     exp = (res.body.response.score).toLocaleString('en') + "/" + (res.body.response.scoreNext).toLocaleString('en')
     expleftcommas = (expleft).toLocaleString('en')
-
+    tanname = (res.body.response.name)
+    gss = (res.body.response.gearScore).toLocaleString('en')
+    
     if ((config.mode) == "small") {
       bigg = (config.logo)
       smalll = (rankimg)
@@ -260,7 +267,8 @@ async function updatetanki() {
       biggtexx = (rank)
       console.log(`Updated Tanki Info & config`);
     } else {
-      console.log(`Use small or big mode in config.json`)
+      console.log(`\nUse small or big mode in config.yml\n`)
+      await timer(5000);
       process.exit()
     };
     
@@ -273,12 +281,14 @@ async function updatetanki() {
     } else if ((config.logo) == "normal") {
       foo = "bar"
     } else {
-      console.log(`Use normal, fire, ice or railgun logo in config.json`)
+      console.log(`\nUse normal, fire, ice or railgun logo in config.yml\n`)
+      await timer(5000);
       process.exit()
     };
 
   } catch (e) {
-    console.log(`User not found, check your username in config.json!`)
+    console.log(`\nUser not found, check your username in config.yml!\n`)
+    await timer(5000);
     process.exit()
   }
 }
@@ -294,12 +304,13 @@ async function updatediscord() {
     `Golds : ${golds}`,
     `Exp Left : ${expleftcommas}`,
     `Exp : ${exp}`,
-    `Rank : ${rank}`
+    `Rank : ${rank}`,
+    `GS : ${gss}`
   ];
 
   const randomItem = myArray[Math.floor(Math.random() * myArray.length)];
   rpc.setActivity({
-    details: `Nickname : ` + (config.username), //as mentioned by Blload
+    details: `Nickname : ` + (tanname), //as mentioned by Blload
     state: (randomItem),
     startTimestamp,
     largeImageKey: (bigg),
@@ -317,3 +328,86 @@ rpc.on('ready', () => {
 });
 
 rpc.login(appClient);
+} catch (ee) {
+    console.log(ee)
+console.log("Send this to『Geop』#4066");
+console.log("Exiting...")
+setTimeout(function(){process.exit()}, 5000);
+  }
+} catch (e) {
+snekfetch.get('https://rawcdn.githack.com/GeopJr/discord-tanki/e8f4df821277af4a24b7df87b48a0a9455cc6d3f/config.yml')
+  .pipe(fs.createWriteStream('config.yml')); // pipes
+  async function ask() {
+      console.log("Downloading Config.yml ...")
+  await timer(3000);
+  console.log("Done!\n")
+fs.readFile('./config.yml', 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }
+rl.question('What is your tanki username?\n', (answer) => {
+  var resultt = data.replace(/your_tanki_username/g, answer)
+  console.log('Your username was set to:', answer);
+
+
+rl.question('\nWould you like big or small rank icon?\n(Answer either big or small)\n', (answerr) => {
+  var answerre = answerr.toLowerCase();
+  if ((answerre == "big") || (answerre == "small")){
+      var resulttt = resultt.replace(/the_mode_you_want/g, answerre)
+  console.log('Your rank size was set to:', answerre);
+ 
+  } else {
+  console.log("You didn't input big or small, your input was:", answerre);
+console.log('Try again!');
+rl.pause()
+fs.unlinkSync('./config.yml')
+console.log("Exiting...")
+setTimeout(function(){process.exit()}, 5000);
+function freeze(time) {
+    const stop = new Date().getTime() + time;
+    while(new Date().getTime() < stop);       
+}
+freeze(5000);
+  }
+
+
+rl.question('\nWould you like normal.fire,ice or railgun logo?\n(Answer either normal, fire, ice or railgun)\n', (answeer) => {
+      var answeerr = answeer.toLowerCase();
+  if (answeerr == "fire" || answeerr == "ice" || answeerr == "railgun" || answeerr == "normal") {
+      var resultttt = resulttt.replace(/the_logo_you_want/g, answeerr)
+  console.log('Your logo was set to:', answeerr);
+     
+// process.stdin.once('data', function () {
+//   process.exit()
+// });
+  } else {
+   console.log("You didn't input normal, fire, ice or railgun, your input was:", answeerr);
+console.log('Try again!');
+rl.pause()
+fs.unlinkSync('./config.yml')
+console.log("Exiting...")
+setTimeout(function(){process.exit()}, 5000);
+function freeze(time) {
+    const stop = new Date().getTime() + time;
+    while(new Date().getTime() < stop);       
+}
+freeze(5000);
+  }
+    fs.writeFile('./config.yml', resultttt, 'utf8', function (err) {
+     if (err) return console.log(err);
+  });
+    console.log("\nconfig.yml got saved");
+    console.log("Don't delete it");
+    console.log("You can now relaunch it");
+    console.log("If you find any errors send them to『Geop』#4066");
+    setTimeout(function(){rl.close();}, 5000);
+    });
+});
+});
+
+
+});
+}
+
+ask();
+}
