@@ -23,6 +23,7 @@ https://imgur.com/a/lCERtoW
 - [RELEASES](https://github.com/GeopJr/discord-tanki/releases), download the one for your OS & bits
 - Extract the folder somewhere
 - Double click `discord-tanki-windows-x64.exe` (if you are using linux or mac, I guess you know what to do)
+- Follow the instructions shown at your cmd/terminal
 - That's all , leave it open on your taskbar
 
 # In case there's something wrong with the installer/setup
