@@ -13,7 +13,7 @@
 
 # MAJOR UPDATE: THIS IS NOW COMPILED, AKA YOU DON'T NEED TO INSTALL NODE
 # [RELEASES](https://github.com/GeopJr/discord-tanki/releases), DOWNLOAD THE ONE FOR YOUR OS & BITS
-# CHANGE THE `config.yml` INFO AS SHOWN [HERE](https://github.com/GeopJr/discord-tanki#config-example)
+# FOLLOW THE INSTRUCTIONS SHOWN AT YOUR CMD/TERMINAL
 
 # Screenshots
 https://imgur.com/a/lCERtoW
@@ -22,13 +22,17 @@ https://imgur.com/a/lCERtoW
 
 - [RELEASES](https://github.com/GeopJr/discord-tanki/releases), download the one for your OS & bits
 - Extract the folder somewhere
-- Open config.yml using a text editor
+- Double click `discord-tanki-windows-x64.exe` (if you are using linux or mac, I guess you know what to do)
+- That's all , leave it open on your taskbar
+
+# In case there's something wrong with the installer/setup
+- Create a file at the same folder the .exe (or sh etc) is at, named config.yml using a text editor
+- Put these [info](https://raw.githack.com/GeopJr/discord-tanki/master/config.yml) inside
 - Replace `your_tanki_username` with your tanki username
 - Replace `the_mode_you_want` with either `small` or `big`
 - Replace `the_logo_you_want` with either `normal`, `fire`, `ice` or `railgun`
 - Save it
-- Double click `index-win.exe` (if you are using linux or mac, I guess you know what to do)
-- That's all , leave it open on your taskbar
+- Double click your executable
 
 # Config Example
 #### This is an example config
