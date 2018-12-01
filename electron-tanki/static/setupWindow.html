@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Setup</title>
+    <link href="https://modesta.alexflipnote.xyz/css/modesta.min.css" type="text/css" rel="stylesheet">
+    <style>
+        body {
+      background-image: url('https://i.imgur.com/GaA2DmY.jpg')
+    }
+  </style>
+    <script>window.$ = window.jQuery = require('jquery');</script>
+</head>
+
+<body>
+    <div class="background"></div>
+    <section class="fullscreen">
+        <div class="center-object">
+            <section class="me">
+                <h1 class="title">Setup</h1>
+                <div class="form-container">
+                    <form action="http://localhost:5000/setup" method="post" id="my_form">
+                        <label for="name">Username</label>
+                        <textarea name="name" class="full-width" placeholder="GeopJr" id="name"></textarea>
+                        <div class="row">
+                            <div class="one-half column">
+                                <label for="exampleSelect">Size</label>
+                                <select class="full-width" id="exampleSelect" name="size">
+                                    <option value="big">big</option>
+                                    <option value="small">small</option>
+                                </select>
+                            </div>
+                            <div class="one-half column">
+                                <label for="exampleSelect">Logo</label>
+                                <select class="full-width" id="exampleSelects" name="logo">
+                                    <option value="normal">Normal</option>
+                                    <option value="fire">Fire</option>
+                                    <option value="ice">Ice</option>
+                                    <option value="railgun">Railgun</option>
+                                </select>
+                            </div>
+                        </div>
+                        <input class="btn hover-scale emerald" type="submit" value="Submit">
+                    </form>
+                </div>
+            </section>
+        </div>
+    </section>
+    <script>
+        $("#my_form").submit(function (event) {
+            event.preventDefault();
+            var post_url = $(this).attr("action");
+            var form_data = $(this).serialize();
+
+            $.post(post_url, form_data, function (response) {
+                alert(response)
+            });
+        });</script>
+</body>
+
+</html>
