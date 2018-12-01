@@ -10,6 +10,8 @@ https://imgur.com/a/lCERtoW
 - Install
 - Profit?
 
+![image](https://i.imgur.com/3PSNS0a.png)
+
 # Using [ModestaCSS](https://github.com/AlexFlipnote/ModestaCSS)
 # Template from https://github.com/bradtraversy/electronshoppinglist
 
