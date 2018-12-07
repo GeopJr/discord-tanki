@@ -1,34 +1,36 @@
 {
   "name": "electron-tanki",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "discord-tanki but its an electron app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "electron .",
     "start": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder"
   },
   "build": {
     "appId": "xyz.geopjr.electrontanki",
- "win": {
+    "win": {
       "target": "NSIS",
       "icon": "build/icon.ico"
-},
-"linux": {
-	"icon": "icon.png"
-},
-"nsis": {
-    "createStartMenuShortcut": true
-  }
-},
+    },
+    "linux": {
+      "icon": "icon.png"
+    },
+    "nsis": {
+      "createStartMenuShortcut": true,
+      "createDesktopShortcut": "always",
+      "shortcutName": "Tanki Online RPC"
+    }
+  },
   "author": "GeopJr",
   "license": "GPL-3.0",
   "devDependencies": {
     "electron-builder": "^20.38.2"
   },
   "dependencies": {
-    "discord-rpc": "3.0.0-beta.8",
+    "discord-rpc": "3.0.0-beta.11",
     "ejs": "^2.6.1",
     "electron-store": "^2.0.0",
     "express": "^4.16.4",

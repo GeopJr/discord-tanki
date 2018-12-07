@@ -15,7 +15,6 @@ let mainWindow;
 const app2 = express()
 
 app2.set('views', path.join(__dirname, 'views'));
-
 app2.use(express.static('public'));
 
 app2.set('view engine', 'ejs');
@@ -29,6 +28,7 @@ app.on('ready', function () {
     autoHideMenuBar: true,
     useContentSize: true,
     resizable: true,
+    backgroundColor: '#383c4a'
   });
   mainWindow.loadURL('http://localhost:5000/');
   mainWindow.focus();
@@ -50,10 +50,11 @@ tray.setContextMenu(contextMenu)
   mainWindow.on('closed', function () {
     app.quit();
   });
-
-
 })
 
+process.on("uncaughtException", (err) => {
+    console.log(err);
+});
 
 app2.get('/', (req, res, next) => {
   res.render('mainWindow', { bacc: 'file://' + __dirname + '/background.jpg', setup: 'file://' + __dirname + '/static/setupWindow.html' });
@@ -83,6 +84,8 @@ app2.post('/setup', function (req, res) {
 });
 
 app2.get('/rpc', (req, res, next) => {
+try {
+ if ((store.get('size')) == "small") {
   const rpcc = require('./rpc')
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'static/running.html'),
@@ -90,6 +93,48 @@ app2.get('/rpc', (req, res, next) => {
     protocol: 'file:',
     slashes: true
   }))
+} else if ((store.get('size')) == "big") {
+  const rpcc = require('./rpc')
+  mainWindow.loadURL(url.format({
+    pathname: path.join(__dirname, 'static/running.html'),
+    nodeIntegration: false,
+    protocol: 'file:',
+    slashes: true
+  }))
+} else {
+mainWindoww = new BrowserWindow({
+    webPreferences: {
+      webSecurity: false
+    },
+    autoHideMenuBar: true,
+    useContentSize: true,
+    resizable: true,
+    backgroundColor: '#383c4a'
+  });
+  mainWindoww.loadURL(url.format({
+    pathname: path.join(__dirname, 'static/setupWindow.html'),
+    nodeIntegration: false,
+    protocol: 'file:',
+    slashes: true
+  }))
+}
+} catch (e) {
+mainWindoww = new BrowserWindow({
+    webPreferences: {
+      webSecurity: false
+    },
+    autoHideMenuBar: true,
+    useContentSize: true,
+    resizable: true,
+    backgroundColor: '#383c4a'
+  });
+  mainWindoww.loadURL(url.format({
+    pathname: path.join(__dirname, 'static/setupWindow.html'),
+    nodeIntegration: false,
+    protocol: 'file:',
+    slashes: true
+  }))
+}
 })
 
 if (process.platform == 'darwin') {

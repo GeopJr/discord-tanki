@@ -1,4 +1,13 @@
 # An electron app for discord-tanki
+[![Build Status](https://travis-ci.org/GeopJr/discord-tanki.svg?branch=master)](https://travis-ci.org/GeopJr/discord-tanki)
+
+<div align="center">
+  <br />
+  <p>
+    <a href="https://codeclimate.com/github/GeopJr/discord-tanki/maintainability"><img src="https://api.codeclimate.com/v1/badges/fcaa6a8bbf1778ac9655/maintainability" /></a>
+    <a href="https://github.com/GeopJr/discord-tanki/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-000000.svg" alt="MIT" /></a>
+  </p>
+</div>
 #### Shows your tanki info (crystals, golds, k/d ratio, exp, exp left, rank) also shows your rank icon & time wasted playin :)!
 
 # Screenshots
