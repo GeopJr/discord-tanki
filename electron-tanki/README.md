@@ -10,12 +10,14 @@
 </div>
 #### Shows your tanki info (crystals, golds, k/d ratio, exp, exp left, rank) also shows your rank icon & time wasted playin :)!
 
+# [DOWNLOAD HERE](https://github.com/GeopJr/discord-tanki/releases/tag/2.0.0)
+
 # Screenshots
 https://imgur.com/a/lCERtoW
 
 # How to use
 
-- Download it
+- [Download it](https://github.com/GeopJr/discord-tanki/releases/tag/2.0.0)
 - Install
 - Profit?
 
