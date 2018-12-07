@@ -51,6 +51,17 @@ The rich presence will update every 15 seconds
 
 The states randomly circle from crystals to kd ratio to etc
 
+# Building source
+
+- Clone
+- `npm install`
+- `npm start`
+
+# Electron-builder
+
+- Install electron builder
+- `env ELECTRON_BUILDER_ALLOW_Uenv ELECTRON_BUILDER_ALLOW_UNRESOLVED_DEPENDENCIES=true yarn dist`
+
 # Found any errors or need help?
 
 Open an issue or message me **『Geop』#4066** or email me **geopjr@geopjr.xyz**
