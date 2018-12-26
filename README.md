@@ -18,17 +18,15 @@
 
 
 # ELECTRON = GUI = GRAPHICAL USER INTERFACE
-#### [DOWNLOAD ELECTRON](https://github.com/GeopJr/discord-tanki/releases/tag/2.0.0)
-
 # CLI = COMMAND LINE INTERFACE
-#### [DOWNLOAD CLI](https://github.com/GeopJr/discord-tanki/releases/tag/1.9.0)
+
 
 # Screenshots
 https://imgur.com/a/lCERtoW
 
 # How to use
 
-- [RELEASE](https://github.com/GeopJr/discord-tanki/releases/tag/2.0.0), download the one for your OS & bits
+- [DOWNLOAD](https://discord-tanki.geopjr.xyz/), download the one for your OS & bits
 - Install
 - Profit?
 
