@@ -11,6 +11,12 @@
 # A discord-rpc for tanki online!
 #### Shows your tanki info (crystals, golds, k/d ratio, exp, exp left, rank) also shows your rank icon & time wasted playin :)!
 
+
+# DOWNLOAD HERE : https://discord-tanki.geopjr.xyz/
+
+
+
+
 # ELECTRON = GUI = GRAPHICAL USER INTERFACE
 #### [DOWNLOAD ELECTRON](https://github.com/GeopJr/discord-tanki/releases/tag/2.0.0)
 
