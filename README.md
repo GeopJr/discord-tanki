@@ -8,18 +8,10 @@
   </p>
 </div>
 
-# A discord-rpc for tanki online!
+# A discord-rpc for Tanki Online!
 #### Shows your tanki info (crystals, golds, k/d ratio, exp, exp left, rank) also shows your rank icon & time wasted playin :)!
 
-
 # DOWNLOAD HERE : https://discord-tanki.geopjr.xyz/
-
-
-
-
-# ELECTRON = GUI = GRAPHICAL USER INTERFACE
-# CLI = COMMAND LINE INTERFACE
-
 
 # Screenshots
 https://imgur.com/a/lCERtoW
@@ -29,6 +21,8 @@ https://imgur.com/a/lCERtoW
 - [DOWNLOAD](https://discord-tanki.geopjr.xyz/), download the one for your OS & bits
 - Install
 - Profit?
+
+![image](https://i.imgur.com/3PSNS0a.png)
 
 # Small & Big screenshots
 
@@ -49,15 +43,6 @@ Ice & Railgun
 
 ![ice&railgun](https://i.imgur.com/j6ntnXd.png)
 
-# Notes
-
-This will update your tanki info every 5 minutes
-
-The rich presence will update every 15 seconds
-
-The states randomly circle from crystals to kd ratio to etc
-
-
 # Found any errors or need help?
 
 Open an issue or message me **『Geop』#4066** or email me **geopjr@geopjr.xyz**
@@ -66,19 +51,20 @@ Open an issue or message me **『Geop』#4066** or email me **geopjr@geopjr.xyz*
 
 - Install [node](https://nodejs.org/en/)
 - Download this (clone the repo)
-- Select between electron or cli
-- Open config.yml using a text editor (if cli)
-- Replace `your_tanki_username` with your tanki username (if cli)
-- Replace `the_mode_you_want` with either `small` or `big` (if cli)
-- Replace `the_logo_you_want` with either `normal`, `fire`, `ice` or `railgun` (if cli)
-- Save it (if exists)
-- Double click `start.bat` (for linux users`start.sh`) (if cli)
-- That's all , leave it open on your taskbar  (if cli)
-- Type `npm start` (if electron)
-- Profit?
 
-# Thanks
-Manos#8049 for testing
+### Building source
+
+- `npm install`
+- `npm start`
+
+### Electron-builder
+
+- Install electron builder
+- `env ELECTRON_BUILDER_ALLOW_Uenv ELECTRON_BUILDER_ALLOW_UNRESOLVED_DEPENDENCIES=true yarn dist`
+
+
+# Using [ModestaCSS](https://github.com/AlexFlipnote/ModestaCSS)
+# Template from https://github.com/bradtraversy/electronshoppinglist
 
 <div align="center">
   <br />
