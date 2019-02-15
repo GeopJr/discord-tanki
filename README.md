@@ -11,24 +11,37 @@
 # A discord-rpc for tanki online!
 #### Shows your tanki info (crystals, golds, k/d ratio, exp, exp left, rank) also shows your rank icon & time wasted playin :)!
 
-
-# DOWNLOAD HERE : https://discord-tanki.geopjr.xyz/
-
-
-
-
-# ELECTRON = GUI = GRAPHICAL USER INTERFACE
-# CLI = COMMAND LINE INTERFACE
-
+# CLI COMPILED VERSION [HERE](https://github.com/GeopJr/discord-tanki/releases/tag/1.9.0)
 
 # Screenshots
 https://imgur.com/a/lCERtoW
 
 # How to use
 
-- [DOWNLOAD](https://discord-tanki.geopjr.xyz/), download the one for your OS & bits
-- Install
-- Profit?
+- [RELEASES 1.9.0](https://github.com/GeopJr/discord-tanki/releases/tag/1.9.0), download the one for your OS & bits
+- Extract the folder somewhere
+- Double click `discord-tanki-windows-x64.exe` (if you are using linux or mac, I guess you know what to do)
+- Follow the instructions shown at your cmd/terminal
+- That's all , leave it open on your taskbar
+
+# In case there's something wrong with the installer/setup
+- Create a file at the same folder the .exe (or sh etc) is at, named config.yml using a text editor
+- Put these [info](https://raw.githack.com/GeopJr/discord-tanki/master/config.yml) inside
+- Replace `your_tanki_username` with your tanki username
+- Replace `the_mode_you_want` with either `small` or `big`
+- Replace `the_logo_you_want` with either `normal`, `fire`, `ice` or `railgun`
+- Save it
+- Double click your executable
+
+# Config Example
+#### This is an example config
+```
+username: GeopJr
+
+mode: big
+
+logo: fire
+```
 
 # Small & Big screenshots
 
@@ -57,6 +70,7 @@ The rich presence will update every 15 seconds
 
 The states randomly circle from crystals to kd ratio to etc
 
+# ALMOST EVERY ERROR IS CAUSED BY A WRONG CONFIG.YML
 
 # Found any errors or need help?
 
@@ -66,19 +80,13 @@ Open an issue or message me **『Geop』#4066** or email me **geopjr@geopjr.xyz*
 
 - Install [node](https://nodejs.org/en/)
 - Download this (clone the repo)
-- Select between electron or cli
-- Open config.yml using a text editor (if cli)
-- Replace `your_tanki_username` with your tanki username (if cli)
-- Replace `the_mode_you_want` with either `small` or `big` (if cli)
-- Replace `the_logo_you_want` with either `normal`, `fire`, `ice` or `railgun` (if cli)
-- Save it (if exists)
-- Double click `start.bat` (for linux users`start.sh`) (if cli)
-- That's all , leave it open on your taskbar  (if cli)
-- Type `npm start` (if electron)
-- Profit?
-
-# Thanks
-Manos#8049 for testing
+- Open config.yml using a text editor
+- Replace `your_tanki_username` with your tanki username
+- Replace `the_mode_you_want` with either `small` or `big`
+- Replace `the_logo_you_want` with either `normal`, `fire`, `ice` or `railgun`
+- Save it
+- Double click `start.bat` (for linux users`start.sh`)
+- That's all , leave it open on your taskbar
 
 <div align="center">
   <br />
