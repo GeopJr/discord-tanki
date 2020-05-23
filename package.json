@@ -1,6 +1,6 @@
 {
   "name": "electron-tanki",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Tanki Online Rich Presence",
   "main": "index.js",
   "scripts": {
