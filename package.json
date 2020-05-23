@@ -1,6 +1,6 @@
 {
   "name": "electron-tanki",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Tanki Online Rich Presence",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,6 @@
         "AppImage",
         "deb",
         "rpm",
-        "pacman",
         "tar.gz"
       ]
     },
