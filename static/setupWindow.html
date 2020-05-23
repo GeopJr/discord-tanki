@@ -5,55 +5,172 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <title>Setup</title>
-    <link href="https://rawcdn.githack.com/AlexFlipnote/ModestaCSS/42e6ab888856e70e556011c743fa4e54b7218e05/css/legacy/1.0.0/modesta.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../public/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
         body {
-      background-image: url('https://i.imgur.com/GaA2DmY.jpg')
-    }
-  </style>
+            background-image: url('https://i.imgur.com/GaA2DmY.jpg')
+        }
+
+        /* label color */
+        .input-field label {
+            color: #fff;
+        }
+
+        ::-webkit-input-placeholder {
+            color: rgb(90, 90, 90);
+            opacity: 1 !important;
+            /* for older chrome versions. may no longer apply. */
+        }
+
+        :-moz-placeholder {
+            /* Firefox 18- */
+            color: rgb(90, 90, 90);
+            opacity: 1 !important;
+        }
+
+        ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: rgb(90, 90, 90);
+            opacity: 1 !important;
+        }
+
+        :-ms-input-placeholder {
+            color: rgb(90, 90, 90);
+        }
+
+        /* label focus color */
+        .input-field input[type="text"]:focus+label {
+            color: #ffff00;
+        }
+
+        /* label underline focus color */
+        .input-field input[type="text"]:focus {
+            border-bottom: 1px solid #ffff00;
+            box-shadow: 0 1px 0 0 #000;
+        }
+
+        /* valid color */
+        .input-field input[type="text"].valid {
+            border-bottom: 1px solid #ffff00;
+            box-shadow: 0 1px 0 0 #000;
+        }
+
+        /* invalid color */
+        .input-field input[type="text"].invalid {
+            border-bottom: 1px solid #ffff00;
+            box-shadow: 0 1px 0 0 #000;
+        }
+
+        /* icon prefix focus color */
+        .input-field .prefix.active {
+            color: #ffff00;
+        }
+
+        .dropdown-content {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .select-wrapper>.input.select-dropdown:focus,
+        .dropdown-trigger {
+            color: #fff
+        }
+
+        .dropdown-content li>a,
+        .dropdown-content li>span,
+        input:not([type]):focus:not([readonly])+label,
+        input[type="text"]:not(.browser-default):focus:not([readonly])+label,
+        input[type="password"]:not(.browser-default):focus:not([readonly])+label,
+        input[type="email"]:not(.browser-default):focus:not([readonly])+label,
+        input[type="url"]:not(.browser-default):focus:not([readonly])+label,
+        input[type="time"]:not(.browser-default):focus:not([readonly])+label,
+        input[type="date"]:not(.browser-default):focus:not([readonly])+label,
+        input[type="datetime"]:not(.browser-default):focus:not([readonly])+label,
+        input[type="datetime-local"]:not(.browser-default):focus:not([readonly])+label,
+        input[type="tel"]:not(.browser-default):focus:not([readonly])+label,
+        input[type="number"]:not(.browser-default):focus:not([readonly])+label,
+        input[type="search"]:not(.browser-default):focus:not([readonly])+label,
+        textarea.materialize-textarea:focus:not([readonly])+label {
+            color: #ffff00;
+        }
+
+        .select-wrapper input.select-dropdown:focus,
+        input:not([type]):focus:not([readonly]),
+        input[type="text"]:not(.browser-default):focus:not([readonly]),
+        input[type="password"]:not(.browser-default):focus:not([readonly]),
+        input[type="email"]:not(.browser-default):focus:not([readonly]),
+        input[type="url"]:not(.browser-default):focus:not([readonly]),
+        input[type="time"]:not(.browser-default):focus:not([readonly]),
+        input[type="date"]:not(.browser-default):focus:not([readonly]),
+        input[type="datetime"]:not(.browser-default):focus:not([readonly]),
+        input[type="datetime-local"]:not(.browser-default):focus:not([readonly]),
+        input[type="tel"]:not(.browser-default):focus:not([readonly]),
+        input[type="number"]:not(.browser-default):focus:not([readonly]),
+        input[type="search"]:not(.browser-default):focus:not([readonly]),
+        textarea.materialize-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #ffff00;
+            -webkit-box-shadow: 0 1px 0 0 #ffff00;
+            box-shadow: 0 1px 0 0 #ffff00;
+        }
+    </style>
     <script>window.$ = window.jQuery = require('jquery');</script>
 </head>
 
 <body>
     <div class="background"></div>
-    <section class="fullscreen">
-        <div class="center-object">
-            <section class="me">
-                <h1 class="title">Setup</h1>
-                <div class="form-container">
-                    <form action="http://localhost:5000/setup" method="post" id="my_form">
-                        <label for="name">Username</label>
-                        <input name="name" class="full-width" placeholder="GeopJr" id="name"></input>
-                        <div class="row">
-                            <div class="one-half column">
-                                <label for="exampleSelect">Size</label>
-                                <select class="full-width" id="exampleSelect" name="size">
-                                    <option value="big">big</option>
-                                    <option value="small">small</option>
-                                </select>
-                            </div>
-                            <div class="one-half column">
-                                <label for="exampleSelect">Logo</label>
-                                <select class="full-width" id="exampleSelects" name="logo">
-                                    <option value="normal">Normal</option>
-                                    <option value="fire">Fire</option>
-                                    <option value="ice">Ice</option>
-                                    <option value="railgun">Railgun</option>
-                                </select>
-                            </div>
-                        </div>
-                        <input class="btn hover-scale emerald" type="submit" value="Submit">
-                    </form>
-                </div>
-            </section>
-        </div>
-    </section>
-    <script>
-        $("#my_form").submit(function (event) {
-            event.preventDefault();
-            var post_url = $(this).attr("action");
-            var form_data = $(this).serialize();
+    <main class="valign-wrapper" style="width:100%;height:100%;position: absolute;">
+        <div class="valign" style="width:100%;">
+            <div class="container">
+                <div class="row" style="margin-right: 0;">
+                    <div class="col s12">
+                        <div class="card" style="background-color: rgba(0,0,0,0.5);">
+                            <div class="card-content white-text center">
+                                <span class="card-title center" style="font-size: 4rem;">Setup</span>
+                                <form action="http://localhost:5000/setup" method="post" id="setupForm">
+                                    <div class="input-field col s12">
+                                        <input placeholder="GeopJr" id="username" name="name" type="text"
+                                            class="validate" style="color:#fff"></input>
+                                        <label for="username" class="active">Username</label>
+                                    </div>
 
+                                    <div class="input-field col s6">
+                                        <select id="size" name="size">
+                                            <option value="big">Big</option>
+                                            <option value="small">Small</option>
+                                        </select>
+                                        <label>Size</label>
+                                    </div>
+                                    <div class="input-field col s6" style="color:#fff">
+                                        <select id="logo" name="logo">
+                                            <option value="normal">Normal</option>
+                                            <option value="fire">Fire</option>
+                                            <option value="ice">Ice</option>
+                                            <option value="railgun">Railgun</option>
+                                        </select>
+                                        <label>Logo</label>
+                                    </div>
+                            </div>
+                            <input class="btn hover-scale emerald" type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="../public/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#logo').formSelect();
+        });
+        $(document).ready(function () {
+            $('#size').formSelect();
+        });
+        $("#setupForm").submit(function (event) {
+            event.preventDefault();
+            let post_url = $(this).attr("action");
+            let form_data = $(this).serialize();
             $.post(post_url, form_data, function (response) {
                 alert(response)
             });

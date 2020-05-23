@@ -5,42 +5,80 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
   <title>Discord-Tanki RPC by GeopJr</title>
-  <link href="https://rawcdn.githack.com/AlexFlipnote/ModestaCSS/42e6ab888856e70e556011c743fa4e54b7218e05/css/legacy/1.0.0/modesta.css" type="text/css" rel="stylesheet">
-  <script type="text/javascript" src="https://rawcdn.githack.com/AlexFlipnote/ModestaCSS/42e6ab888856e70e556011c743fa4e54b7218e05/js/modal.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <style>
     body {
       background-image: url('https://i.imgur.com/Pwr8RWR.jpg')
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
     }
   </style>
 </head>
 
 <body>
-  <div class="background"></div>
-  <section class="fullscreen">
-    <div class="center-object">
-      <section class="me">
-        <h1 class="title">Discord-Tanki</h1>
-        <span class="undertitle">By GeopJr</span>
-      </section>
-      <div class="buttons">
-        <a id="trigger" class="btn hover-scale amethyst" target="_blank">How-To</a>
-        <a href="<%= setup %>" class="btn hover-scale pomegranate" target="_blank">Setup</a>
-        <a href="http://localhost:5000/rpc" class="btn hover-scale discord">Run</a>
-        <a onclick="myFunction()" class="btn hover-scale carrot" target="_blank">Creator</a>
-        <div id="modal" class="modal modal--close">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Click Setup<br>Add the required info<br>Close the setup window<br>Click Run</p>
+  <main class="valign-wrapper" style="width:100%;height:100%;position: absolute;">
+    <div class="valign" style="width:100%;">
+      <div class="container">
+        <div class="row" style="margin-right: 0;">
+          <div class="col s12">
+            <div class="card" style="background-color: rgba(0,0,0,0.5);">
+              <div class="card-content white-text center">
+                <span class="card-title center" style="font-size: 4rem;">Discord-Tanki</span>
+                <span class="card-title center" style="margin-bottom: 4rem;">By GeopJr</span>
+                <a href="<%= setup %>" class="waves-effect waves-light btn-large red" target="_blank"><i
+                    class="material-icons" style="vertical-align: -6px;">settings</i> Setup</a>
+                <a href="http://localhost:5000/rpc" class="waves-effect waves-light btn-large orange"
+                  style="color:#000"><i class="material-icons" style="vertical-align: -6px;">directions_run</i> Run</a>
+                <a onclick="openInBrowser('https://geopjr.xyz/')" class="waves-effect waves-light btn-large yellow"
+                  style="color:#000" target="_blank"><i class="material-icons"
+                    style="vertical-align: -6px;">account_circle</i> Creator</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large deep-orange modal-trigger" href="#modal">
+        <i class="large material-icons">help</i>
+      </a>
+    </div>
+  </main>
+  <footer class="page-footer center"
+    style="background-color: rgba(0,0,0,0.5);position:fixed;width:100%;padding-top: 0px;">
+    <div class="container center">
+      Invite my Discord bots! <a style="color:#ffff00"
+        onclick="openInBrowser('https://top.gg/bot/521054896884154368')">Soft&Wet</a> and <a style="color:#0086ff"
+        onclick="openInBrowser('https://top.gg/bot/443053627419000833')">Granz</a>!
+    </div>
+  </footer>
+  <div style="color:#fff"><%= version %></div>
+  <div id="modal" class="modal" style="background-color: rgba(0,0,0,0.8);color:#fff;">
+    <div class="modal-content center">
+      <h4>How to use:</h4>
+      <p>Click Setup<br>Add the required info<br>Close the setup window<br>Click Run<br>Minimize it!</p>
+    </div>
+  </div>
+  <div class="background"></div>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
   <script>
-    function myFunction() {
-      var shell = require('electron').shell;
+    document.addEventListener('DOMContentLoaded', function () {
+      let elems = document.querySelectorAll('.modal');
+      let instances = M.Modal.init(elems);
+    });
+    function openInBrowser(url) {
+      let shell = require('electron').shell;
       event.preventDefault();
-      shell.openExternal('https://geopjr.xyz/');
+      shell.openExternal(url);
     }
   </script>
 </body>

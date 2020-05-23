@@ -5,29 +5,49 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <title>Discord-Tanki RPC by GeopJr</title>
-    <link href="https://rawcdn.githack.com/AlexFlipnote/ModestaCSS/42e6ab888856e70e556011c743fa4e54b7218e05/css/legacy/1.0.0/modesta.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../public/css/materialize.min.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
     <style>
-        body {
-            background-image: url("https://i.imgur.com/uZEnHAF.jpg")
+        body{
+            background-image: url('https://i.imgur.com/uZEnHAF.jpg')
         }
     </style>
 </head>
 
 <body>
-    <section class="fullscreen">
-        <div class="background" style="background-image: url('file:///home/geop/Desktop/electron-tanki/resources/app/background.jpg');"></div>
-        <div class="center-object">
-            <section class="me">
-                <h1 class="title">
-                    <font color="#00ff00">Running...</font>
-                </h1>
-                <span class="undertitle"><font color="#00ff00">You can <font color="#ff0000">minimize</font> me!</font></span>
-                <img src="https://orig13.deviantart.net/8162/f/2015/152/3/1/8bit_sherman_profile__fixed__by_muddyfudger-d8vkkhy.gif"
-                    style="width: 20vw;height:35vh">
-            </section>
-            <div class="loader"></div>
+    <main class="valign-wrapper" style="width:100%;height:100%;position: absolute;">
+        <div class="valign" style="width:100%;">
+          <div class="container">
+            <div class="row" style="margin-right: 0;">
+              <div class="col s12">
+                <div class="card" style="background-color: rgba(0,0,0,0.5);">
+                  <div class="card-content white-text center">
+                    <span class="card-title center" style="font-size: 4rem;">Rich Presence Started!</span>
+                    <span class="card-title center" style="margin-bottom: 4rem;">You can minimize me now!</span>
+                    <h2 class="time"></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </main>
+    <script>
+        let startTime = new Date();;
+        function display() {
+            let endTime = new Date();
+            let timeDiff = endTime - startTime;
+            timeDiff /= 1000;
+            let seconds = Math.round(timeDiff % 60);
+            timeDiff = Math.floor(timeDiff / 60);
+            let minutes = Math.round(timeDiff % 60);
+            timeDiff = Math.floor(timeDiff / 60);
+            let hours = Math.round(timeDiff % 24);
+            $(".time").text("Running for: " + hours + ":" + minutes + ":" + seconds);
+            setTimeout(display, 1000);
+        }
+        display()
+    </script>
 </body>
 
 </html>
