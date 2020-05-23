@@ -1,6 +1,6 @@
 {
-  "name": "electron-tanki",
-  "version": "2.0.5",
+  "name": "discord-tanki",
+  "version": "3.0.0",
   "description": "Tanki Online Rich Presence",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
         "repo": "discord-tanki"
       }
     ],
-    "appId": "xyz.geopjr.electrontanki",
+    "appId": "xyz.geopjr.discordtanki",
     "win": {
       "target": "NSIS",
       "icon": "build/icon.ico"
