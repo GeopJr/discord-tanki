@@ -1,6 +1,6 @@
 {
   "name": "electron-tanki",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Tanki Online Rich Presence",
   "main": "index.js",
   "scripts": {
@@ -36,9 +36,13 @@
       "createStartMenuShortcut": true,
       "createDesktopShortcut": "always",
       "shortcutName": "Tanki Online RPC"
+    },
+    "deb": {
+      "packageCategory": "games",
+      "priority": "standard"
     }
   },
-  "author": "GeopJr",
+  "author": "GeopJr <geopjr@geopjr.xyz> (https://geopjr.xyz/)",
   "license": "GPL-3.0",
   "devDependencies": {
     "electron": "^6.0.0",
