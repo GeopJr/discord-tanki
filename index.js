@@ -106,7 +106,7 @@ process.on("uncaughtException", (err) => {
 });
 
 expressApp.get('/', (req, res, next) => {
-  res.render('mainWindow', { css: 'file://' + __dirname + '/public/css/materialize.min.css', js: 'file://' + __dirname + '/public/js/materialize.min.js', version: require('./package.json').version, setup: 'file://' + __dirname + '/static/setupWindow.html' });
+  res.render('mainWindow', { materialIcons: 'file://' + __dirname + "./node_modules/material-design-icons/iconfont/material-icons.css", css: 'file://' + __dirname + '/public/css/materialize.min.css', js: 'file://' + __dirname + '/public/js/materialize.min.js', version: require('./package.json').version, setup: 'file://' + __dirname + '/static/setupWindow.html' });
 });
 
 expressApp.listen(5000, function () {
