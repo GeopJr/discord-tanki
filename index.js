@@ -8,7 +8,7 @@ const store = new Store();
 const logger = require('./logger');
 const Tray = electron.Tray
 const iconPath = path.join(__dirname, 'icon.png')
-const {app, BrowserWindow, Menu, protocol, ipcMain} = require('electron');
+const { app, BrowserWindow, Menu, protocol, ipcMain } = require('electron');
 const expressApp = express()
 const tankionline = require("tankionline.js");
 
@@ -18,9 +18,44 @@ expressApp.set('view engine', 'ejs');
 
 let mainWindow;
 let tray = null
+let win;
+
+function sendStatusToWindow(text) {
+  logger.log(text);
+  win.webContents.send('message', text);
+}
+function createAboutWindow() {
+  win = new BrowserWindow({ width: 530, height: 156, backgroundColor: '#383c4a', autoHideMenuBar: true, useContentSize: true, webPreferences: { webSecurity: false, nodeIntegration: true }, });
+  win.on('closed', () => {
+    win = null;
+  });
+  win.loadURL(`file://${__dirname}/version.html#v${app.getVersion()}`);
+  return win;
+}
+autoUpdater.on('checking-for-update', () => {
+  sendStatusToWindow('Checking for update...');
+})
+autoUpdater.on('update-available', (info) => {
+  sendStatusToWindow('Update available.');
+})
+autoUpdater.on('update-not-available', (info) => {
+  sendStatusToWindow('Update not available.');
+  win.close();
+})
+autoUpdater.on('error', (err) => {
+  logger.log(err)
+  sendStatusToWindow('Error in auto-updater. ' + err);
+  win.close();
+})
+autoUpdater.on('download-progress', (progressObj) => {
+  let log_message = "Downloading: " + progressObj.transferred + "/" + progressObj.total + " | " + progressObj.percent + "% " + "(" + progressObj.bytesPerSecond + "/s)"
+  sendStatusToWindow(log_message);
+})
+autoUpdater.on('update-downloaded', (info) => {
+  sendStatusToWindow('Update downloaded');
+});
 
 app.on('ready', function () {
-  autoUpdater.checkForUpdatesAndNotify();
   express()
   mainWindow = new BrowserWindow({
     webPreferences: {
@@ -47,6 +82,11 @@ app.on('ready', function () {
       }
     },
     {
+      label: 'About', click: function () {
+        createAboutWindow();
+      }
+    },
+    {
       label: 'Quit', click: function () {
         app.isQuiting = true;
         app.quit();
@@ -54,6 +94,8 @@ app.on('ready', function () {
     }
   ]);
   tray.setContextMenu(contextMenu)
+  createAboutWindow()
+  autoUpdater.checkForUpdatesAndNotify();
   mainWindow.on('closed', function () {
     app.quit();
   });
@@ -64,7 +106,7 @@ process.on("uncaughtException", (err) => {
 });
 
 expressApp.get('/', (req, res, next) => {
-  res.render('mainWindow', {version: require('./package.json').version, setup: 'file://' + __dirname + '/static/setupWindow.html' });
+  res.render('mainWindow', { css: 'file://' + __dirname + '/public/css/materialize.min.css', js: 'file://' + __dirname + '/public/js/materialize.min.js', version: require('./package.json').version, setup: 'file://' + __dirname + '/static/setupWindow.html' });
 });
 
 expressApp.listen(5000, function () {

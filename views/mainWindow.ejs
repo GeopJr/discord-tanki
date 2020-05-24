@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
   <title>Discord-Tanki RPC by GeopJr</title>
-  <link rel="stylesheet" type="text/css" href="/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="<%= css %>">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <style>
     body {
@@ -33,11 +33,12 @@
             <div class="card" style="background-color: rgba(0,0,0,0.5);">
               <div class="card-content white-text center">
                 <span class="card-title center" style="font-size: 4rem;">Discord-Tanki</span>
-                <span class="card-title center" style="margin-bottom: 4rem;">By GeopJr</span>
-                <a href="<%= setup %>" class="waves-effect waves-light btn-large red" target="_blank"><i
-                    class="material-icons" style="vertical-align: -6px;">settings</i> Setup</a>
+                <span class="card-title center" style="margin-bottom: 2rem;">By GeopJr</span>
+                <a href="<%= setup %>" class="waves-effect waves-light btn-large red" style="margin-right:5px"
+                  target="_blank"><i class="material-icons" style="vertical-align: -6px;">settings</i> Setup</a>
                 <a href="http://localhost:5000/rpc" class="waves-effect waves-light btn-large orange"
-                  style="color:#000"><i class="material-icons" style="vertical-align: -6px;">directions_run</i> Run</a>
+                  style="color:#000;margin-right:5px"><i class="material-icons"
+                    style="vertical-align: -6px;">directions_run</i> Run</a>
                 <a onclick="openInBrowser('https://geopjr.xyz/')" class="waves-effect waves-light btn-large yellow"
                   style="color:#000" target="_blank"><i class="material-icons"
                     style="vertical-align: -6px;">account_circle</i> Creator</a>
@@ -69,7 +70,7 @@
     </div>
   </div>
   <div class="background"></div>
-  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <script type="text/javascript" src="<%= js %>"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       let elems = document.querySelectorAll('.modal');
