@@ -1,6 +1,6 @@
 {
   "name": "discord-tanki",
-  "version": "3.0.4",
+  "version": "3.0.8",
   "description": "Tanki Online Rich Presence",
   "main": "index.js",
   "scripts": {
@@ -44,7 +44,7 @@
   "author": "GeopJr <geopjr@geopjr.xyz> (https://geopjr.xyz/)",
   "license": "GPL-3.0",
   "devDependencies": {
-    "electron": "^6.0.0",
+    "electron": "^7.2.4",
     "electron-builder": "^22.6.1"
   },
   "dependencies": {

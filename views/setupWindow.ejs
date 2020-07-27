@@ -5,9 +5,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <title>Setup</title>
-    <link rel="stylesheet" type="text/css" href="../public/css/materialize.min.css">
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="<%= css %>">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
+        .toastbad {
+            background-color: #df382b;
+        }
+
+        .toastgood {
+            background-color: #34a853;
+        }
+
         body {
             background-image: url('https://i.imgur.com/GaA2DmY.jpg')
         }
@@ -113,7 +122,9 @@
             box-shadow: 0 1px 0 0 #ffff00;
         }
     </style>
-    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script>
+        window.$ = window.jQuery = require('jquery');
+    </script>
 </head>
 
 <body>
@@ -128,8 +139,7 @@
                                 <span class="card-title center" style="font-size: 4rem;">Setup</span>
                                 <form action="http://localhost:5000/setup" method="post" id="setupForm">
                                     <div class="input-field col s12">
-                                        <input placeholder="GeopJr" id="username" name="name" type="text"
-                                            class="validate" style="color:#fff"></input>
+                                        <input id="namefield" placeholder="<%= name %>" id="username" name="name" type="text" class="validate" style="color:#fff"></input>
                                         <label for="username" class="active">Username</label>
                                     </div>
 
@@ -151,7 +161,7 @@
                                     </div>
                             </div>
                             <div class="container center">
-                                <input class="btn yellow waves-effect waves-light" type="submit" value="Submit" style="color:black">
+                                <button class="btn yellow waves-effect waves-light" type="submit" value="Submit" style="color:black">Submit</button>
                             </div>
                             </form>
                         </div>
@@ -161,8 +171,10 @@
         </div>
         </div>
     </main>
-    <script type="text/javascript" src="../public/js/materialize.min.js"></script>
+    <script type="text/javascript" src="<%= js %>"></script>
     <script>
+        $("#logo").val('<%= logo %>');
+        $("#size").val('<%= size %>');
         $(document).ready(function () {
             $('#logo').formSelect();
         });
@@ -171,12 +183,15 @@
         });
         $("#setupForm").submit(function (event) {
             event.preventDefault();
-            let post_url = $(this).attr("action");
-            let form_data = $(this).serialize();
+            const post_url = $(this).attr("action");
+            const form_data = $(this).serialize();
+            $("#namefield").attr("disabled", true);
             $.post(post_url, form_data, function (response) {
-                alert(response)
+                M.toast({html: response, classes: `toast${response.startsWith("SAVED")? "good" : "bad"}`, displayLength: 10000});
+                $("#namefield").attr("disabled", false);
             });
-        });</script>
+        });
+    </script>
 </body>
 
 </html>
