@@ -80,7 +80,7 @@
         M.toast({html: "Checking for updates...", displayLength: 5000});
         $.get( "http://localhost:5000/check", function( data ) {
           M.Toast.dismissAll();
-          M.toast({html: data.length > 0? `<a onclick='openInBrowser("${data}")' style='cursor: pointer;color:#fff;text-decoration: underline;'>Theres an available update</a>` : "You are using the latest version!", classes: `toast${data.length > 0? "bad" : "good"}`, displayLength: 15000});
+          M.toast({html: data.length > 0? `<a onclick='openInBrowser("${data}")' style='cursor: pointer;color:#fff;text-decoration: underline;'>Theres an available update</a>` : "You are using the latest version!", classes: `toast${data.length > 0? "bad" : "good"}`, displayLength: data.length > 0? 4000 : 15000});
         });
         document.addEventListener('DOMContentLoaded', function () {
           const elems = document.querySelectorAll('.modal');
