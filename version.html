@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-    <title>Updater</title>
+    <title>About</title>
     <link rel="stylesheet" type="text/css" href="./public/css/materialize.min.css">
     <style>
         body {
@@ -20,22 +20,22 @@
                 <div class="col s12 center">
                     <h4 style="color:#fff">Current version: <span id="version">vX.Y.Z</span></h4>
                     <h6 style="color:#fff">
-                        <div id="messages">Checking for update...</div>
+                        <p>
+                            Made by: GeopJr &lt;geopjr.xyz&gt; (geopjr@geopjr.xyz)<br> Github: <a onclick="openInBrowser('https://github.com/GeopJr/discord-tanki')" style="cursor: pointer;">GeopJr/discord-tanki</a><br> Technologies Used: Electron, Electron-store, tankionline.js, express
+                        </p>
                     </h6>
                 </div>
             </div>
         </div>
     </main>
     <script>
-        let version = window.location.hash.substring(1);
+        const version = window.location.hash.substring(1);
         document.getElementById('version').innerText = version;
-        const { ipcRenderer } = require('electron');
-        ipcRenderer.on('message', function (event, text) {
-            let container = document.getElementById('messages');
-            let message = document.createElement('div');
-            message.innerHTML = text;
-            container.appendChild(message);
-        })
+        function openInBrowser(url) {
+            let shell = require('electron').shell;
+            event.preventDefault();
+            shell.openExternal(url);
+        }
     </script>
 </body>
 
