@@ -1,4 +1,5 @@
 const electron = require('electron');
+const isDev = require('electron-is-dev');
 // const {
 //     autoUpdater
 // } = require("electron-updater")
@@ -20,7 +21,7 @@ const {
 } = require('electron');
 const expressApp = express()
 const tankionline = require("tankionline.js");
-
+const rootIsDev = isDev? "." : process.resourcesPath + "/app.asar/public/";
 let win;
 // Functions
 function compareVersions(v1, v2) {
@@ -149,16 +150,16 @@ app.on('ready', function() {
 // GET REQUESTS
 expressApp.get('/', async(req, res, next) => {
     res.render('mainWindow', {
-        css: './css/materialize.min.css',
-        js: './js/materialize.min.js',
+        css: rootIsDev + '/css/materialize.min.css',
+        js: rootIsDev + '/js/materialize.min.js',
         version: require('./package.json').version
     });
 });
 
 expressApp.get('/setup', (req, res, next) => {
     res.render('setupWindow', {
-        css: './css/materialize.min.css',
-        js: './js/materialize.min.js',
+        css: rootIsDev + '/css/materialize.min.css',
+        js: rootIsDev + '/js/materialize.min.js',
         name: store.get('name') ? store.get('name') : "GeopJr",
         size: store.get('size') ? store.get('size') : "big",
         logo: store.get('logo') ? store.get('logo') : "normal"
