@@ -21,7 +21,7 @@ const {
 } = require('electron');
 const expressApp = express()
 const tankionline = require("tankionline.js");
-const rootIsDev = isDev? "." : process.resourcesPath + "/app.asar/public/";
+const rootIsDev = isDev? "." : "file://" + process.resourcesPath + "/app.asar/public";
 let win;
 // Functions
 function compareVersions(v1, v2) {
