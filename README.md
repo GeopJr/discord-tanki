@@ -24,7 +24,7 @@ https://imgur.com/a/lCERtoW
 - Install
 - Profit?
 
-![image](https://i.imgur.com/XRwWIzt.png)
+![image](https://i.imgur.com/Y8EH4UT.png)
 
 # Small & Big screenshots
 
